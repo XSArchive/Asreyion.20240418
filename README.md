@@ -1,2 +1,2 @@
 # Asreyion
-Asreyion is an online community management bot that is designed to help make managing multi-platform communities easier.
+Asreyion is a modular content management system that allows for easy integration with external services such as YouTube and Discord to create dynamic and interactive websites.
