@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{FE2848
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asreyion", "source\Asreyion\Asreyion.csproj", "{440EC75B-0E5D-46AE-9E34-8ACC9C1B9852}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asreyion.Core", "source\Asreyion.Core\Asreyion.Core.csproj", "{89D8E9C7-CF5C-4DBD-965D-898A1E45ABAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{440EC75B-0E5D-46AE-9E34-8ACC9C1B9852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{440EC75B-0E5D-46AE-9E34-8ACC9C1B9852}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{440EC75B-0E5D-46AE-9E34-8ACC9C1B9852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D8E9C7-CF5C-4DBD-965D-898A1E45ABAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D8E9C7-CF5C-4DBD-965D-898A1E45ABAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D8E9C7-CF5C-4DBD-965D-898A1E45ABAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D8E9C7-CF5C-4DBD-965D-898A1E45ABAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{440EC75B-0E5D-46AE-9E34-8ACC9C1B9852} = {FE28483A-056A-481E-B0F9-E90FADA98AFA}
+		{89D8E9C7-CF5C-4DBD-965D-898A1E45ABAC} = {FE28483A-056A-481E-B0F9-E90FADA98AFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF3C351B-C3F3-43DC-A6BF-421DE90D7041}
