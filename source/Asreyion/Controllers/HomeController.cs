@@ -1,4 +1,4 @@
-﻿using Asreyion.Models;
+using Asreyion.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
