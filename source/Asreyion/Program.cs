@@ -1,4 +1,7 @@
+using Asreyion.Core.Areas.Account.Controllers;
 using Asreyion.Core.Areas.Account.Data;
+using Asreyion.Core.Areas.Account.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -14,17 +17,37 @@ public class Program
 
         // Add services to the container.
         _ = builder.Services.AddDbContext<AuthenticationDbContext>();
+        _ = builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+            {
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+            })
+            .AddEntityFrameworkStores<AuthenticationDbContext>()
+            .AddDefaultTokenProviders();
 
-        _ = builder.Services.AddControllersWithViews();
+        _ = builder.Services.AddControllersWithViews()
+            .AddApplicationPart(typeof(SessionController).Assembly);
 
         _ = builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-        _ = builder.Services.AddScoped<IUrlHelper>(x => {
+        _ = builder.Services.AddScoped<IUrlHelper>(x =>
+        {
             ActionContext? actionContext = x.GetRequiredService<IActionContextAccessor>().ActionContext;
             IUrlHelperFactory factory = x.GetRequiredService<IUrlHelperFactory>();
             return factory.GetUrlHelper(context: actionContext ?? throw new NullReferenceException());
         });
 
         WebApplication app = builder.Build();
+
+        // Apply migrations
+        using (IServiceScope scope = app.Services.CreateScope())
+        {
+            IServiceProvider services = scope.ServiceProvider;
+
+            services.GetRequiredService<AuthenticationDbContext>().Database.Migrate();
+        }
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
@@ -39,6 +62,7 @@ public class Program
 
         _ = app.UseRouting();
 
+        _ = app.UseAuthentication();
         _ = app.UseAuthorization();
 
         _ = app.MapControllerRoute(

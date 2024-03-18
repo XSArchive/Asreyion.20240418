@@ -83,4 +83,9 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Account\Views\Management\" />
+    <Folder Include="Areas\Account\Views\Session\" />
+  </ItemGroup>
+
 </Project>

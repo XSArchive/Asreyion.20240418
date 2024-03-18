@@ -18,6 +18,18 @@ public class AuthenticationDbContext : IdentityDbContext<ApplicationUser, Applic
             .AddEnvironmentVariables();
 
         this.configuration = builder.Build();
+
+        string connectionString = this.configuration["Database:AuthenticationConnection"] ?? "Data Source=Data/Authentication.db";
+
+        if (connectionString.Contains("Filename=") || connectionString.Contains("Data Source="))
+        {
+            string? directory = Path.GetDirectoryName(connectionString.Replace("Filename=", "").Replace("Data Source=", ""));
+
+            if (!string.IsNullOrWhiteSpace(directory) && !Directory.Exists(directory))
+            {
+                _ = Directory.CreateDirectory(path: directory);
+            }
+        }
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
