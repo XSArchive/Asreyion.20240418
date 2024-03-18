@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{FE2848
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{11CFA6D7-FBF4-4FD3-963B-309E216C74D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asreyion", "source\Asreyion\Asreyion.csproj", "{004B9DF2-78CB-4A3C-89A8-B12E39D3A7C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asreyion.Core", "source\Asreyion.Core\Asreyion.Core.csproj", "{D8D34DB3-2892-4BD5-89BF-00B525B656B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asreyion.Core", "source\Asreyion.Core\Asreyion.Core.csproj", "{D8D34DB3-2892-4BD5-89BF-00B525B656B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asreyion", "source\Asreyion\Asreyion.csproj", "{71959AA0-61A2-40F5-8303-0F4752D3F236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{004B9DF2-78CB-4A3C-89A8-B12E39D3A7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{004B9DF2-78CB-4A3C-89A8-B12E39D3A7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{004B9DF2-78CB-4A3C-89A8-B12E39D3A7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{004B9DF2-78CB-4A3C-89A8-B12E39D3A7C3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8D34DB3-2892-4BD5-89BF-00B525B656B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8D34DB3-2892-4BD5-89BF-00B525B656B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8D34DB3-2892-4BD5-89BF-00B525B656B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8D34DB3-2892-4BD5-89BF-00B525B656B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71959AA0-61A2-40F5-8303-0F4752D3F236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71959AA0-61A2-40F5-8303-0F4752D3F236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71959AA0-61A2-40F5-8303-0F4752D3F236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71959AA0-61A2-40F5-8303-0F4752D3F236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{11CFA6D7-FBF4-4FD3-963B-309E216C74D4} = {FE28483A-056A-481E-B0F9-E90FADA98AFA}
-		{004B9DF2-78CB-4A3C-89A8-B12E39D3A7C3} = {FE28483A-056A-481E-B0F9-E90FADA98AFA}
 		{D8D34DB3-2892-4BD5-89BF-00B525B656B5} = {11CFA6D7-FBF4-4FD3-963B-309E216C74D4}
+		{71959AA0-61A2-40F5-8303-0F4752D3F236} = {FE28483A-056A-481E-B0F9-E90FADA98AFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF3C351B-C3F3-43DC-A6BF-421DE90D7041}
