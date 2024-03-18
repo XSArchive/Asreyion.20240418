@@ -1,7 +1,6 @@
-using Asreyion.Core.Areas.Test.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Asreyion;
 
@@ -12,8 +11,7 @@ public class Program
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        _ = builder.Services.AddControllersWithViews()
-            .AddApplicationPart(typeof(FunctionController).Assembly);
+        _ = builder.Services.AddControllersWithViews();
 
         _ = builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
         _ = builder.Services.AddScoped<IUrlHelper>(x => {
