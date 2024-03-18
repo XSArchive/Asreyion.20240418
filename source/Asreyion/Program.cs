@@ -1,6 +1,8 @@
+using Asreyion.Core.Areas.Account.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.EntityFrameworkCore;
 
 namespace Asreyion;
 
@@ -11,6 +13,8 @@ public class Program
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+        _ = builder.Services.AddDbContext<AuthenticationDbContext>();
+
         _ = builder.Services.AddControllersWithViews();
 
         _ = builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
