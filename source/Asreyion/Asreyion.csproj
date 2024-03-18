@@ -78,5 +78,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Asreyion.Core\Asreyion.Core.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="..\Asreyion.Core\**\*.cshtml" Link="%(RecursiveDir)%(Filename)%(Extension)"/>
+  </ItemGroup>
 
 </Project>
