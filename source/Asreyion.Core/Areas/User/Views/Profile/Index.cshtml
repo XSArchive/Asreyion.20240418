@@ -1,0 +1,36 @@
+@model Asreyion.Core.Areas.User.Models.ProfileViewModel
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = Model != null ? Model.Username + "'s Profile" : "Profile Not Found";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <h2>Profile Not Found</h2>
+
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+else 
+{
+    <h2>@Model.Username's Profile</h2>
+
+    <div>
+        <h3>Username: @Model.Username</h3>
+        <h3>Id: @Model.Id</h3>
+        <h3>Roles:</h3>
+        <ul>
+            @foreach (var role in Model.Roles)
+            {
+                <li>@role</li>
+            }
+        </ul>
+    </div>
+}

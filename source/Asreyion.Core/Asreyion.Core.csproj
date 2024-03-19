@@ -86,6 +86,7 @@
   <ItemGroup>
     <Folder Include="Areas\Account\Views\Management\" />
     <Folder Include="Areas\Account\Views\Session\" />
+    <Folder Include="Areas\User\Views\Profile\" />
   </ItemGroup>
 
 </Project>
