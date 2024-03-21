@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  asreyion:
+    build:
+      context: .
+      dockerfile: source/Asreyion/Dockerfile
+    expose:
+      - 8080
+      - 8081
+    restart: unless-stopped
+    container_name: asreyion
+    networks:
+      - nginx-proxy
+    environment:
+      VIRTUAL_HOST: asreyion.example.com # Change to your desired domain
+      LETSENCRYPT_HOST: asreyion.example.com # Change to your desired domain
+      LETSENCRYPT_EMAIL: your.email@example.com # Change to your email
+    volumes:
+      - asreyion-data:/app
+
+volumes:
+  asreyion-data:
+
+networks:
+  nginx-proxy:
+    external:
+      name: system.nginx.proxy
