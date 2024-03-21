@@ -55,6 +55,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\docker-compose.yml" Link="docker-compose.yml" />
     <None Include="..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>content</PackagePath>
@@ -74,7 +75,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="..\Asreyion.Core\**\*.cshtml" Link="%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Content Include="..\Asreyion.Core\**\*.cshtml" Link="%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 
 </Project>
