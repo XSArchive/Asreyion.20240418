@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: source/Asreyion/Dockerfile
     expose:
-      - 80
-      - 443
+      - 8080
+      - 8081
     restart: unless-stopped
     container_name: asreyion
     networks:
